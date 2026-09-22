@@ -146,5 +146,25 @@ namespace G_NET_106_OOP_04
             }
         }
         #endregion
+
+        public void PrintInsurancePolicies()
+        {
+            Console.WriteLine($"=== Insurance Reports at {CenterName} ===");
+            bool hasInsurable = false;
+
+            foreach (Shipment s in shipments)
+            {
+                if (s is IInsurable insurableShipment)
+                {
+                    hasInsurable = true;
+                    DeliveryReport.PrintInsurance(insurableShipment);
+                }
+            }
+
+            if (!hasInsurable)
+            {
+                Console.WriteLine("No insurable shipments found.");
+            }
+        }
     }
 }
