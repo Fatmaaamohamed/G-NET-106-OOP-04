@@ -41,6 +41,36 @@
 
             #region Question08
 
+            DeliveryAddress destination = new DeliveryAddress("123 Main St", "Cairo", 11511);
+
+            StandardShipment standard = new StandardShipment("SH001", "Laptop", 2.5m, 95.0m, destination);
+
+            ExpressShipment express = new ExpressShipment("SH002", "Fragile Item", 1.5m, 70.0m, destination, 30.0m);
+
+            InternationalShipment international = new InternationalShipment("SH003", "Documents", 3.0m, 200.0m, destination, "Germany", 60.0m);
+
+            DeliveryCenter center = new DeliveryCenter("Delivery Center");
+
+            center.AddShipment(standard);
+
+            center.AddShipment(express);
+
+            center.AddShipment(international);
+
+            Console.WriteLine("==========================================");
+            center.PrintAllShipments();
+
+            Console.WriteLine("==========================================");
+
+            center.PrintTrackingStatuses();
+
+            Console.WriteLine("==========================================");
+
+            center.PrintInsurancePolicies();
+
+            Console.WriteLine("==========================================");
+            Console.WriteLine("\nInterface Polymorphism Demonstrated Successfully.");
+
 
             #endregion
         }
