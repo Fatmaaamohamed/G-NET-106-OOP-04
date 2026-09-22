@@ -18,6 +18,28 @@
              */
 
             #endregion
+
+
+            #region Question02
+            /*
+             
+            a) An abstract class defines an "is-a" relationship for related classes, while an interface defines a "can-do" capability for unrelated classes.
+               Abstract classes can contain implemented methods and instance state; interfaces only declare method signatures without state.
+               Abstract classes support constructors; interfaces do not.
+               A class can inherit from only one abstract class, but it can implement multiple interfaces.
+             
+            
+            b) Defining capabilities across unrelated classes, Needing multiple inheritance of roles, Creating a lightweight contract without sharing state or code.
+
+
+            c) Multiple Abstract Classes: No. A class can inherit from only one base class.
+               Multiple Interfaces: Yes. A class can implement multiple interfaces.
+             
+             */
+
+            #endregion
+
+
         }
     }
 }
