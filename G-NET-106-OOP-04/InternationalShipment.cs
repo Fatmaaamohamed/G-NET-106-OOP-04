@@ -4,7 +4,7 @@ using System.Text;
 
 namespace G_NET_106_OOP_04
 {
-    internal class InternationalShipment: Shipment
+    internal class InternationalShipment: Shipment , ITrackable
     {
         string destinationCountry;
 
@@ -80,6 +80,11 @@ namespace G_NET_106_OOP_04
             Console.WriteLine($"Customs Report for {DestinationCountry}: Fee = {CustomsFee} EGP");
         }
 
-       
+        #region Question04
+        public string GetTrackingStatus()
+        {
+            return $"Shipment {TrackingCode} has been Delivered.";
+        }
+        #endregion
     }
 }

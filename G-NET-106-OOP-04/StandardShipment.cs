@@ -4,7 +4,7 @@ using System.Text;
 
 namespace G_NET_106_OOP_04
 {
-    internal class StandardShipment: Shipment
+    internal class StandardShipment: Shipment , ITrackable
     {
         
         public StandardShipment(string trackingCode)
@@ -34,6 +34,13 @@ namespace G_NET_106_OOP_04
             Console.WriteLine($"Destination   : {Destination?.GetFullAddress()}");
         }
 
+        #endregion
+
+        #region Question04
+        public string GetTrackingStatus()
+        {
+            return $"Shipment {TrackingCode} is Ready.";
+        }
         #endregion
     }
 }

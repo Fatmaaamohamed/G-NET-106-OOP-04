@@ -4,7 +4,7 @@ using System.Text;
 
 namespace G_NET_106_OOP_04
 {
-    internal class ExpressShipment :Shipment
+    internal class ExpressShipment :Shipment , ITrackable
     {
         decimal extraFee;
 
@@ -51,6 +51,13 @@ namespace G_NET_106_OOP_04
 
         #endregion
 
+        #region Question04
 
+        public string GetTrackingStatus()
+        {
+            return $"Shipment {TrackingCode} is Out for Delivery.";
+        }
+
+        #endregion
     }
 }
