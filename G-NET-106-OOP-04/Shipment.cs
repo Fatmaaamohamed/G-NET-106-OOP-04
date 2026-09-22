@@ -12,7 +12,7 @@ namespace G_NET_106_OOP_04
         private decimal weight;
         private decimal deliveryFee;
 
-       
+
 
 
         public DeliveryAddress Destination { get; set; }
@@ -132,11 +132,12 @@ namespace G_NET_106_OOP_04
         }
 
 
+        #region Question02
+        public abstract decimal EstimatedCost { get; }
 
+        public abstract void PrintShipment();
 
-   
-        
-
+        #endregion
 
 
 
