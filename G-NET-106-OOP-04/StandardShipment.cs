@@ -4,7 +4,7 @@ using System.Text;
 
 namespace G_NET_106_OOP_04
 {
-    internal class StandardShipment: Shipment , ITrackable
+    internal class StandardShipment: Shipment , ITrackable , IInsurable
     {
         
         public StandardShipment(string trackingCode)
@@ -40,6 +40,14 @@ namespace G_NET_106_OOP_04
         public string GetTrackingStatus()
         {
             return $"Shipment {TrackingCode} is Ready.";
+        }
+        #endregion
+
+
+        #region Question05
+        public decimal CalculateInsurance()
+        {
+            return EstimatedCost * 0.05m;
         }
         #endregion
     }
